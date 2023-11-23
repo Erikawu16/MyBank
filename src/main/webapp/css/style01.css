@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.navbar {
+	background-color: rgb(225, 135, 127);
+}
+
+.btn-logout {
+	background-color: rgb(141, 171, 217);
+	border-color: transparent;
+
+}
+
+.btn-logout:hover {
+
+	border: 1px solid rgb(128, 128, 128);
+}

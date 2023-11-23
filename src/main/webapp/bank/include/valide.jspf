@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="w-75 mx-auto border border-3 rounded p-4  mb-5">
+	<form class="row g-3 needs-validation"  method="post" action="">
+		<div class="col-md-3 ">
+			<label for="validationCustom01" class="form-label  fs-5 fw-bold">姓名:</label>
+			<input type="text" class="form-control" id="validName" value="Mark"
+				required>
+			<div class="valid-feedback">正確</div>
+		</div>
+
+		<div class="col-md-3">
+			<label for="validationCustom02" class="form-label fs-5 fw-bold">身份證字號:</label>
+			<input type="text" class="form-control" id="validId"
+				value="A123456789" required>
+			<div class="valid-feedback">正確</div>
+		</div>
+		<div class="col-md-3">
+			<label for="validationCustom02" class="form-label  fs-5 fw-bold">出生年月日:</label>
+			<input type="date" name="a_date" id="a_date" class="form-control"
+				required>
+			<div class="valid-feedback">正確</div>
+		</div>
+		<div class="col-md-3  align-self-end ">
+			<input type="radio" class="form-check-input"
+				id="validationFormCheck2" name="radio-stacked" required> <label
+				class="form-check-label" for="validationFormCheck2">男生</label> <input
+				type="radio" class="form-check-input" id="validationFormCheck2"
+				name="radio-stacked" required> <label
+				class="form-check-label" for="validationFormCheck2">女生</label>
+		</div>
+		
+		
+		<div>
+			<div class="col-md-2 pb-1 align-self-center">
+				<label for="TIN" class="p2 fw-bold fs-5 ">【稅務身分】 </label>
+			</div>
+			<div class="col-md-10 pb-1">
+				<div class="custom-control custom-checkbox checkbox-field mt-md-0">
+					<input class="custom-control-input inputChecking valid"
+						id="Residences_TW" type="checkbox" name="Residences" value="TW"
+						aria-invalid="false"> <label
+						class="checkbox_label custom-control-label" for="Residences_TW">具有中華民國稅務身分</label>
+				</div>
+				<div class="custom-control custom-checkbox checkbox-field mt-md-0">
+					<input class="custom-control-input inputChecking"
+						id="Residences_US" type="checkbox" name="Residences" value="US"
+						aria-invalid="false"> <label
+						class="checkbox_label custom-control-label" for="Residences_US">具美國稅務身分【含美國公民、美國稅務公民、持有美國永久居民身分證(綠卡)】
+					</label>
+				</div>
+			</div>
+			<div class="custom-control custom-checkbox checkbox-field mt-md-0">
+				<input class="custom-control-input inputChecking"
+					id="Residences_OTH" type="checkbox" name="Residences" value="OTH"
+					aria-invalid="false"> <label
+					class="checkbox_label custom-control-label" for="Residences_OTH">具美國以外的其他國家/地區稅務身分</label>
+			</div>
+			<div class="inputAlert mt-2"></div>
+		</div>
+	</form>
