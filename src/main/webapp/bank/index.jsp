@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+
+	String error = (String)request.getAttribute("error");
+
+%>    
 
 <%@ include file="./include/header/header_index.jspf"%>
 
@@ -123,11 +128,16 @@ margin-bottom: 80px;
 
 
 		<div class="col border p-4  border-2 rounded  col-5">
-			<form method="post" action="./customer/member.jsp">
+			<form method="post" action="./index">
 				<h4 class="fw-bolder text-center mb-4 title">網路銀行登入</h4>
+			<%
+	    	  	if(error != null) {
+	    	  		out.print("<p class='text-center text-danger fw-bold'>"+error+"</p>");
+	    	  	}
+	    	  %>
 
 				<div class="mb-0">
-					<input name="id" class="form-control" id="id" placeholder="身分證字號">
+					<input name="username" class="form-control" id="id" placeholder="身分證字號">
 				</div>
 				<div class="mb-4">
 					<label for="exampleInputPassword1" class="form-label"></label> <input

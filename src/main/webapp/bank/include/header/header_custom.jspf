@@ -54,10 +54,10 @@ padding:0.5rem !important;
 					<li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="./Account.jsp">帳戶總覽</a></li>
 					<li class="nav-item"><a class="nav-link text-white" href="./Currency.jsp">我要換匯</a></li>
 					<li class="nav-item"><a class="nav-link text-white" href="./Recorder.jsp">交易查詢</a></li>
-					<li class="nav-item"><a class="nav-link text-white" href="./Currency.jsp">會員專區</a></li>
+					<li class="nav-item"><a class="nav-link text-white" href="./member_box.jsp">會員專區</a></li>
 					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="./member.jsp">會員信箱</a></li>
 					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="../index.jsp">會員登出</a></li>
-					
+					</ul>
 							
 			</div>
 			<i class="bi bi-person-circle text-light h5 mb-0 d-none d-lg-flex"></i>

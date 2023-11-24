@@ -18,7 +18,6 @@
 }
 </style>
 
-
 <h2 class="page-title text-center fw-bold mb-3">交易查詢</h2>
 <div class="container mt-5">
 	<div class="col ">
@@ -88,6 +87,3 @@
 
 
 <%@ include file="../include/header/footer.jspf"%>
-
-
-

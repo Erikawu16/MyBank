@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+
+	String error = (String)request.getAttribute("error");
+
+%>    
 <html>
 <head>
 <meta charset="UTF-8">
@@ -27,10 +32,25 @@
 	right: 20px;
 }
 
-.form-area {
-	margin-top: 100px;
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	background-color: #fff;
+	padding: 20px;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 500px;
+	height: auto;
 }
 </style>
+
 
 </head>
 
@@ -48,28 +68,58 @@
 	</nav>
 
 
+
+
+	<div class="d-flex justify-content-center align-items-center vh-100">
+		<form class="needs-validation" novalidate method="post"
+			action="./login">
+			<h4 class="text-center">Login</h4>
+			<%
+	    	  	if(error != null) {
+	    	  		out.print("<p class='text-center text-danger fw-bold'>"+error+"</p>");
+	    	  	}
+	    	  %>
+
+			<div>
+				<label for="username" class="form-label">Username</label> <input
+					type="text" class="form-control" id="username" name="username"
+					value="" required>
+				<div class="invalid-feedback">請輸入帳號</div>
+			</div>
+			<div>
+				<label for="password" class="form-label">Password</label> <input
+					type="password" class="form-control" id="password" name="password"
+					value="" required>
+				<div class="invalid-feedback">請輸入密碼</div>
+			</div>
+			<div class="d-flex justify-content-center mt-3">
+				<button class="btn btn-primary" type="submit">登入</button>
+			</div>
+		</form>
+	</div>
 </body>
 </html>
 
-<div class="w-50 mx-auto form-area border p-3 border-3 rounded">
-	<form method="post" action="./approval.jsp">
-		<div class="mb-3">
-			<label for="exampleInputEmail1" class="form-label">帳號</label> <input
-				type="email" class="form-control" id="exampleInputEmail1"
-				aria-describedby="emailHelp">
+<script type="text/javascript">
+	//Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+		'use strict'
 
-		</div>
-		<div class="mb-3">
-			<label for="exampleInputPassword1" class="form-label">密碼</label> <input
-				type="password" class="form-control" id="exampleInputPassword1">
-			<div id="emailHelp" class="form-text">請注意!!若密碼輸入錯誤三次將鎖定帳號!!</div>
-		</div>
-		<div class="text-center">
-			<button type="submit" class="btn btn-secondary">登入</button>
-		</div>
-	</form>
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
 
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms).forEach(function(form) {
+			form.addEventListener('submit', function(event) {
+				if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
+				}
 
-</div>
+				form.classList.add('was-validated')
+			}, false)
+		})
+	})()
+</script>
 
 <%@ include file="../include/header/footer.jspf"%>
