@@ -6,115 +6,67 @@
 <html>
 <head>
 <style>
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background-color: #97a9c3;
+}
 
+.nav-link {
+	color: #97a9c3
+}
 
+.btn-detail {
+	background-color: rgb(139, 154, 139);
+}
 </style>
-
-<script type="text/javascript"
-	src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-	google.charts.load('current', {
-		'packages' : [ 'table' ]
-	});
-	google.charts.setOnLoadCallback(drawTable);
-
-	function drawTable() {
-		var data = new google.visualization.DataTable();
-		data.addColumn('string', '姓名');
-		data.addColumn('number', '生日');
-		data.addColumn('string', '性別');
-		data.addColumn('string', '註冊日期');
-		data.addColumn('boolean',   'Full Time Employee');
-		data.addRows([ [ 'Mike', {
-			v : 10000,
-			f : '$10,000'
-		}, true ], [ 'Jim', {
-			v : 8000,
-			f : '$8,000'
-		}, false ], [ 'Alice', {
-			v : 12500,
-			f : '$12,500'
-		}, true ], [ 'Bob', {
-			v : 7000,
-			f : '$7,000'
-		}, true ] ]);
-
-		var table = new google.visualization.Table(document
-				.getElementById('table_div'));
-
-		table.draw(data, {
-			showRowNumber : true,
-			width : '100%',
-			height : '100%'
-		});
-	}
-</script>
 
 </head>
 <body>
-
-
-
-
-	<div class="w-75 mx-auto">
+	<div class="w-100 ">
 
 		<ul class="nav nav-pills justify-content-center mt-5 ">
-			<li class="nav-item " role="presentation">
+			<li class="nav-item  " role="presentation">
 				<button class="nav-link active fw-bold tab-title " id="p1-tab"
 					data-bs-toggle="tab" data-bs-target="#p1" type="button" role="tab"
-					aria-controls="p1" aria-selected="false">台幣帳戶</button>
+					aria-controls="p1" aria-selected="true">待審核名單<span class="badge bg-secondary ms-1">3</span></button>
 			</li>
-			<li class="nav-item tab-title " role="presentation">
-				<button class="nav-link fw-bold" id="p2-tab" data-bs-toggle="tab"
-					data-bs-target="#p2" type="button" role="tab" aria-controls="p2"
-					aria-selected="false">外幣帳戶</button>
+			<li class="nav-item  " role="presentation">
+				<button class="nav-link fw-bold tab-title" id="p2-tab"
+					data-bs-toggle="tab" data-bs-target="#p2" type="button" role="tab"
+					aria-controls="p2" aria-selected="false">審核過紀錄</button>
 			</li>
 		</ul>
 
 
+		<!-- 名單 -->
+		<div class="tab-content text-center mt-5 " id="myTabContent">
 
-		<div
-			class="tab-content text-center align-items-center  mx-auto"
-			id="myTabContent">
+			<!-- 未審核名單 -->
+			<div class="tab-pane fade show active row col-12 " id="p1"
+				role="tabpanel" aria-labelledby="p1-tab">
 
-			<div class="tab-pane fade show active  " id="p1" role="tabpanel"
-				aria-labelledby="p1-tab">
+				<%@ include file="../include/manager/unapproval_list.jspf"%>
 
-				<div class="mt-5 mb-3 ">
-					<p4 class="fw-bold fs-1">待審核名單</p4>
-				</div>
 
-				<div id="table_div"></div>
 
 			</div>
-
-
-
-
-
-			<div class="tab-pane fade  " id="p2" role="tabpanel"
+			<!-- 審核記錄 -->
+			<div class="tab-pane fade  col-12 row" id="p2" role="tabpanel"
 				aria-labelledby="p2-tab">
 
-				<div class="mt-5 mb-3 ">
-					<p4 class="fw-bold fs-1">已審核名單</p4>
+				<div class="row w-50 mx-auto mb-5">
+					<h4>審核結果篩選</h4>
+					<select class="form-select" aria-label="Default select example">
+						<option selected>審核結果</option>
+						<option value="1">通過</option>
+						<option value="2">未通過</option>
+					</select>
 				</div>
+				<%@ include file="../include/manager/approvaled_list.jspf"%>
 
-				<div id="table_div"></div>
 			</div>
-
-
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
 </body>
+
 </html>
+

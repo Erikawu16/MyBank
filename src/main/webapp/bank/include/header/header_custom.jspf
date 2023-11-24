@@ -29,13 +29,20 @@
 .body{
 padding-top: 20px;
 }
+.page-title {
+	margin-top: 80px;
+}
+
+.navbar {
+padding:0.5rem !important;
+}
 </style>
 </head>
 
 <body >
-	<nav class="navbar navbar-expand-lg navbar-light position-stiky top-0 w-100">
+	<nav class="navbar navbar-expand-lg navbar-light position-fixed top-0 w-100">
 		<div class="container-fluid">
-			<a class="navbar-brand text-light">行動商業銀行</a>
+			<a class="navbar-brand text-light ms-1">行動商業銀行</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -44,18 +51,17 @@ padding-top: 20px;
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link active text-white"
-						aria-current="page" href="./Account.jsp">帳戶總覽</a></li>
-					<li class="nav-item"><a class="nav-link text-white"
-						href="./Currency.jsp">我要換匯</a></li>
-					<li class="nav-item"><a class="nav-link text-white" href="./Recorder.jsp">交易紀錄查詢</a>
-					</li>
-					<li class="nav-item"><a class="nav-link text-white" href="#">會員資料設定</a></li>
-					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="../index.jsp">會員登出</a>
-		</li>
+					<li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="./Account.jsp">帳戶總覽</a></li>
+					<li class="nav-item"><a class="nav-link text-white" href="./Currency.jsp">我要換匯</a></li>
+					<li class="nav-item"><a class="nav-link text-white" href="./Recorder.jsp">交易查詢</a></li>
+					<li class="nav-item"><a class="nav-link text-white" href="./Currency.jsp">會員專區</a></li>
+					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="./member.jsp">會員信箱</a></li>
+					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="../index.jsp">會員登出</a></li>
 					
+							
 			</div>
 			<i class="bi bi-person-circle text-light h5 mb-0 d-none d-lg-flex"></i>
+			<a  class="nav-link text-white d-none d-lg-block" href="#"> <i class="bi bi-envelope-fill text-light h5 mb-0 ms-3 d-none d-lg-flex" ></i></a>
 			<a class="nav-link text-white d-none d-lg-block" href="../index.jsp">會員登出</a>
 		</div>
 	</nav>

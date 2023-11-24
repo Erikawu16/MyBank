@@ -23,12 +23,10 @@
 	width: 80vw;
 }
 
-.page-title {
-	margin-top: 80px;
-}
+
 </style>
 
-<h2 class="page-title text-center">帳戶總覽</h2>
+<h2 class="page-title text-center fw-bold mb-3">帳戶總覽</h2>
 
 <ul class="nav nav-tabs justify-content-center mt-5 ">
 

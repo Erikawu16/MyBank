@@ -4,7 +4,7 @@
 
 
 <%@ include file="../include/header/header_custom.jspf"%>
-<style type="text/css">
+<style>
 .btn {
 	border: 1px solid rgb(128, 128, 128);
 }
@@ -20,7 +20,7 @@ margin:20px auto 80px auto;
 }
 </style>
 
-
+<h2 class="page-title text-center fw-bold mb-3">我要換匯</h2>
 <div class="container mt-5">
 	<div class="row col-12">
 		<div class="col col-5">
