@@ -42,7 +42,7 @@ String error = (String) request.getAttribute("error");
 		<div class="carousel-item">
 			<img src="../img/banner01.jpg" class="d-block w-100" alt="...">
 		</div>
-		<div class="carousel-item 123">
+		<div class="carousel-item ">
 			<img src="../img/banner01.jpg" class="d-block w-100" alt="...">
 		</div>
 	</div>
