@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<div class="w-75 mx-auto border border-3 rounded p-4 mb-5"  >
+<div class="border border-3 rounded p-4 mb-5"  >
 	<div class="col-12 ">
 		<label class="btn btn-outline-primary w-100"> 
 		<input
