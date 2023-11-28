@@ -25,7 +25,7 @@ public class login_customerServlet extends HttpServlet {
 			HttpSession session = req.getSession();
 			session.setAttribute("isLogin", true);
 			session.setAttribute("username", username);
-
+			session.setMaxInactiveInterval(60*1);//1分鐘時候沒動作會登出
 			resp.sendRedirect("./customer/member_box.jsp");
 			return;
 

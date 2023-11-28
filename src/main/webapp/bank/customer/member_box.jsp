@@ -12,7 +12,7 @@
 	left: 0;
 	z-index: -1;
 	padding: 70px 0;
-	width: 15vw;
+	width: 30;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: rgb(139, 154, 139);
