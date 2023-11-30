@@ -12,7 +12,7 @@
 	left: 0;
 	z-index: -1;
 	padding: 70px 0;
-	width: 30;
+	width: 200px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: rgb(139, 154, 139);
@@ -22,52 +22,45 @@
 .item:hover {
 	background-color: rgb(139, 154, 139);
 }
-.nav-heading{
-color: rgb(77, 76, 76);
 
+.nav-heading {
+	color: rgb(77, 76, 76);
 }
 
+.pic {
+	height: 320px;
+	width: 250px;
+	border: 1px solid black;
+}
+
+.page-title{
+margin-left: 250px
+}
 </style>
-<div class="row col-12">
 
-	<div class="d-flex col-2">
-		<!-- 側邊導覽列 -->
 		<div class=" border-right sidebar">
-
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center fs-5 fw-bold">
 				<li class="fs-3 nav-heading">【會員專區】</li>
+				
 				<li class="nav-item"><a class="nav-link active text-white"
-					aria-current="page" href="./member_box.jsp">重要通知</a></li>
+					aria-current="page" href="./member_box.jsp"><i class="bi bi-chat-square-text"></i>重要通知</a></li>
+					
 				<li class="nav-item"><a class="nav-link text-white"
-					href="./member_data.jsp">會員資料</a></li>
+					href="./member_data.jsp"><i class="bi bi-person-circle"></i>會員資料</a></li>
 
 			</ul>
 
 
 		</div>
-	</div>
-		<div class=" page-title col-10">
-		<h2 class="  fw-bold mb-3 text-center ">重要通知</h2>
+		
+		
+		
+<div class="row col-12">
+	<div class=" page-title col-10 justify-content-center">
+		<h2 class="  fw-bold mb-3 text-center "><i class="bi bi-chat-square-text"></i>重要通知</h2>
+
+
 	</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<%@ include file="../include/header/footer.jspf"%>
+	

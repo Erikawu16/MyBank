@@ -23,10 +23,10 @@
 	bottom: 20px;
 	right: 5px;
 }
-.step{
-color:rgb(255, 255, 255);
-background: rgb(141, 171, 217);
 
+.step {
+	color: rgb(255, 255, 255);
+	background: rgb(141, 171, 217);
 }
 </style>
 <div class="border mx-5 mt-5 p-3">
@@ -51,16 +51,18 @@ background: rgb(141, 171, 217);
 <!-- 第一部分 -->
 
 <div class="w-75 mx-auto border border-3 rounded p-4  mb-5">
-<h3 class="text-center step w-25 mx-auto fw-bold">1.請填寫基本資料</h3>
+	<h3 class="text-center step w-25 mx-auto fw-bold">1.請填寫基本資料</h3>
 	<div class="w-75 mx-auto mt-3 mb-5 ">
 		<div class="progress">
 			<div class="progress-bar" role="progressbar" style="width: 25%;"
 				aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">25%</div>
 		</div>
 	</div>
-	
-	<form class="row g-3 needs-validation" method="post" action="./register">
+
+	<form class="row g-3 needs-validation" method="post"
+		action="./register">
 		<!-- 基本資料輸入-->
+
 		<div class="col-md-3 ">
 			<label for="name" class="form-label  fs-5 fw-bold">姓名:</label> <input
 				type="text" class="form-control" id="name" name="name" value=""
@@ -69,7 +71,8 @@ background: rgb(141, 171, 217);
 		</div>
 
 		<div class="col-md-3">
-			<label for="Id" class="form-label fs-5 fw-bold">身份證字號:</label> <input
+			<label for="Id" class="form-label fs-5 fw-bold">身份證字號:</label>
+			 <input
 				type="text" class="form-control" id="Id" name="Id" value=" "
 				required>
 			<div class="valid-feedback">此為必填項目</div>
@@ -85,6 +88,28 @@ background: rgb(141, 171, 217);
 			<input type="radio" class="form-check-input" id="F" name="gender"
 				required> <label class="form-check-label" for="gender">女生</label>
 		</div>
+
+
+		<div class="col-md-3">
+			<label for="email"class="form-label fs-5 fw-bold">電子郵件：</label> 
+			<input type="email" id="email" class="form-control"
+				required>
+			<div class="valid-feedback">此為必填項目</div>
+		</div>
+
+
+<div class="col-md-3">
+      <label for="password" class="form-label fs-5 fw-bold">密碼：</label>
+      <input type="password" id="password"   class="form-control" required>
+    </div>
+  <div class="col-md-3">
+      <label for="confirmPassword" class="form-label fs-5 fw-bold">確認密碼：</label>
+      <input type="password" id="confirmPassword" class="form-control" required>
+    </div>
+
+
+
+
 		<!-- 稅務身分 -->
 		<div class="col-12 pb-1 ">
 			<h2 class="p2 fw-bold fs-5 d-inline">【稅務身分】</h2>
@@ -120,7 +145,7 @@ background: rgb(141, 171, 217);
 
 		<!-- 第二部分 -->
 		<div class="w-75 mx-auto mt-5 mb-3 d-block">
-		<h3 class="text-center step w-50 mx-auto fw-bold mb-3">2.請上傳證件資料</h3>
+			<h3 class="text-center step w-50 mx-auto fw-bold mb-3">2.請上傳證件資料</h3>
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" style="width: 50%;"
 					aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">50%</div>
@@ -128,7 +153,7 @@ background: rgb(141, 171, 217);
 		</div>
 
 		<div>
-			
+
 			<%@ include file="./include/uploadpic.jspf"%>
 		</div>
 
@@ -137,7 +162,7 @@ background: rgb(141, 171, 217);
 
 		<!-- 第三部分 -->
 		<div class="w-75 mx-auto mt-5 mb-3 ">
-		<h3 class="text-center step w-50 mx-auto fw-bold mb-3">3.資料確認送出</h3>
+			<h3 class="text-center step w-50 mx-auto fw-bold mb-3">3.資料確認送出</h3>
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" style="width: 75%;"
 					aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
@@ -146,7 +171,7 @@ background: rgb(141, 171, 217);
 
 		<div class="mb-5">
 
-			
+
 			<div class=" border border-3 rounded p-4">
 				<div class="col-12 ">
 					<div class="form-check">
@@ -172,10 +197,6 @@ background: rgb(141, 171, 217);
 
 
 
-
-
-
-
 <script>
 	//Example starter JavaScript for disabling form submissions if there are invalid fields
 	(function() {
@@ -197,3 +218,16 @@ background: rgb(141, 171, 217);
 		})
 	})()
 </script>
+
+<script>
+    
+      // 簡單的驗證邏輯
+      if (password !== confirmPassword) {
+        alert("密碼和確認密碼不匹配");
+      } else {
+        // 這裡可以添加將用戶信息提交到後端的代碼，進行進一步的驗證和處理
+        alert("註冊成功！");
+        // 這裡可以重定向到登錄頁面或其他頁面
+      }
+    });
+  </script>

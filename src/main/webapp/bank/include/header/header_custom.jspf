@@ -52,13 +52,16 @@ padding:0.5rem !important;
 					<li class="nav-item"><a class="nav-link text-white" href="./Recorder.jsp">交易查詢</a></li>
 					<li class="nav-item"><a class="nav-link text-white" href="./member_box.jsp">會員專區</a></li>
 					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="./member.jsp">會員信箱</a></li>
-					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="../index.jsp">會員登出</a></li>
+					<li class="nav-item"><a class="nav-link text-white " >會員登出</a></li>
 					</ul>
 							
 			</div>
 			<i class="bi bi-person-circle text-light h5 mb-0 d-none d-lg-flex"></i>
 			<a  class="nav-link text-white d-none d-lg-block" href="#"> <i class="bi bi-envelope-fill text-light h5 mb-0 ms-3 d-none d-lg-flex" ></i></a>
-			<a class="nav-link text-white d-none d-lg-block" href="../index.jsp">會員登出</a>
+			
+			<i class="bi bi-box-arrow-right text-light ml-3 d-none d-lg-block" role="button" onclick="window.location.href='./logout'">Logout</i>
+	  
+			
 		</div>
 	</nav>
 </body>

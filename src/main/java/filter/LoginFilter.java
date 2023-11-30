@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(value = {""})
+@WebFilter(value = {"/*"})
 public class LoginFilter extends HttpFilter{
 
 	@Override
@@ -20,9 +20,11 @@ public class LoginFilter extends HttpFilter{
 		String urlString = request.getRequestURL().toString();
 		
 		// 放行條件
-		if(urlString.endsWith("login.jsp") || urlString.endsWith("login") 
-				
-				|| urlString.indexOf("/images")>=0 
+		if(urlString.endsWith("index.jsp") || urlString.endsWith("login.jsp") || 
+				urlString.endsWith("register.jsp") || urlString.endsWith("main") 
+				|| urlString.endsWith("login")|| urlString.endsWith("register_finish.jsp")||
+				 urlString.endsWith("register")
+				|| urlString.indexOf("/img")>=0 
 				|| urlString.endsWith(".css")
 				|| urlString.endsWith(".js") ) {
 			chain.doFilter(request, response);
@@ -34,7 +36,7 @@ public class LoginFilter extends HttpFilter{
 		boolean isLogin = session.getAttribute("isLogin") == null 
 				? false: (boolean)session.getAttribute("isLogin");
 		if(!isLogin) {
-			response.sendRedirect("./index.jsp");
+			response.sendRedirect("/MyBank/bank/index.jsp");
 			return;
 		}
 		

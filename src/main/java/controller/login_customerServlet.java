@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(value = "/bank/index")
+@WebServlet(value = "/bank/main")
 public class login_customerServlet extends HttpServlet {
 
 	@Override
@@ -25,7 +25,7 @@ public class login_customerServlet extends HttpServlet {
 			HttpSession session = req.getSession();
 			session.setAttribute("isLogin", true);
 			session.setAttribute("username", username);
-			session.setMaxInactiveInterval(60*1);//1分鐘時候沒動作會登出
+			session.setMaxInactiveInterval(60*60*1);//60分鐘時候沒動作會登出
 			resp.sendRedirect("./customer/member_box.jsp");
 			return;
 

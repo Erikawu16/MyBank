@@ -32,11 +32,14 @@ margin-top:80px;
 					data-bs-toggle="tab" data-bs-target="#p1" type="button" role="tab"
 					aria-controls="p1" aria-selected="true">待審核名單<span class="badge bg-secondary ms-1">3</span></button>
 			</li>
+			
+			
 			<li class="nav-item  " role="presentation">
 				<button class="nav-link fw-bold tab-title" id="p2-tab"
 					data-bs-toggle="tab" data-bs-target="#p2" type="button" role="tab"
 					aria-controls="p2" aria-selected="false">審核過紀錄</button>
 			</li>
+			
 		</ul>
 
 
@@ -52,6 +55,8 @@ margin-top:80px;
 
 
 			</div>
+			
+			
 			<!-- 審核記錄 -->
 			<div class="tab-pane fade  col-12 row" id="p2" role="tabpanel"
 				aria-labelledby="p2-tab">

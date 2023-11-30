@@ -33,6 +33,13 @@ String error = (String) request.getAttribute("error");
 .container {
 	margin-bottom: 80px;
 }
+.flag{
+aspect-ratio: 3 / 2; 
+  width: 100%; /* 也可以換成任何你想要的寬度 */
+  object-fit: cover;
+  object-position: center;
+
+}
 </style>
 
 </head>
@@ -72,8 +79,8 @@ String error = (String) request.getAttribute("error");
 
 				<div class="col">
 					<div class="card">
-						<img src="../img/cn.png" class="card-img-top" alt="..."
-							width="220" height="100px">
+						<img src="../img/cn.png" class="card-img-top flag" alt="..."
+							>
 						<div class="card-body">
 							<h5 class="card-title">人民幣</h5>
 							<h3 class="card-title">CNY</h3>
@@ -88,8 +95,8 @@ String error = (String) request.getAttribute("error");
 				</div>
 				<div class="col">
 					<div class="card">
-						<img src="../img/jp.jpg" class="card-img-top" alt="..."
-							width="220" height="100px">
+						<img src="../img/jp.jpg" class="card-img-top flag" alt="..."
+							>
 						<div class="card-body">
 							<h5 class="card-title">日圓</h5>
 							<h3 class="card-title">JPY</h3>
@@ -104,8 +111,8 @@ String error = (String) request.getAttribute("error");
 				</div>
 				<div class="col">
 					<div class="card">
-						<img src="../img/usa.jpg " class="card-img-top" alt="..."
-							width="220" height="100px">
+						<img src="../img/usa.jpg " class="card-img-top flag" alt="..."
+							>
 						<div class="card-body">
 							<h5 class="card-title">美元</h5>
 							<h3 class="card-title">USD</h3>
@@ -129,7 +136,7 @@ String error = (String) request.getAttribute("error");
 
 
 		<div class="col border p-4  border-2 rounded  col-5">
-			<form method="post" action="./index">
+			<form method="post" action="./main">
 				<h4 class="fw-bolder text-center mb-4 title">網路銀行登入</h4>
 				<%
 				if (error != null) {
