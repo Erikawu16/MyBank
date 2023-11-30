@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="d-flex justify-content-around ">
+	<div class="col-7">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">編號</th>
+					<th scope="col">申請姓名</th>
+					<th scope="col">申請時間</th>
+					<th scope="col">申請帳號</th>
+					<th scope="col">資料明細</th>
+					<th scope="col">審核結果</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>2023/11/23 <br>10:20:53
+					</td>
+					<td>000-000-000-000</td>
+					<td><button type="button" class=" btn btn-secondary">明細</button></td>
+					<td>通過</td>
+				</tr>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>2023/11/23 <br>10:20:53
+					</td>
+					<td>000-000-000-000</td>
+					<td><button type="button" class=" btn btn-secondary">明細</button></td>
+					<td>通過</td>
+				</tr>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>2023/11/23 <br>10:20:53
+					</td>
+					<td>000-000-000-000</td>
+					<td><button type="button" class=" btn btn-secondary">明細</button></td>
+					<td>通過</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-3 border">
+		<p>照片區</p>
+	</div>
+</div>
