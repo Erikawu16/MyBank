@@ -66,6 +66,7 @@ form {
 		</div>
 
 	</nav>
+	
 
 
 
@@ -81,7 +82,8 @@ form {
 	    	  %>
 
 			<div>
-				<label for="username" class="form-label">Username</label> <input
+				<label for="username" class="form-label">Username</label> 
+				<input
 					type="text" class="form-control" id="username" name="username"
 					value="" required>
 				<div class="invalid-feedback">請輸入帳號</div>
@@ -120,6 +122,10 @@ form {
 			}, false)
 		})
 	})()
+	
+	
 </script>
+
+
 
 <%@ include file="../include/header/footer.jspf"%>

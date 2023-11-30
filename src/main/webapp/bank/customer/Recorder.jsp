@@ -18,60 +18,68 @@
 }
 </style>
 
-<h2 class="page-title text-center fw-bold mb-3">交易查詢</h2>
+<h2 class="page-title text-center fw-bold mb-3"><i class="bi bi-journal-bookmark-fill"></i>交易查詢</h2>
 <div class="container mt-5">
 	<div class="col ">
 		<h4 class="text-center">帳戶選擇</h4>
 		<select class="form-select justify-content-center m-auto w-50"
 			aria-label="Default select example">
 			<option selected>請選擇查詢帳戶</option>
-			<option value="1">One</option>
-			<option value="2">Two</option>
-			<option value="3">Three</option>
+			<option value="1">台幣帳戶</option>
+			<option value="2">外幣帳戶</option>
 		</select>
 	</div>
 
 
+
+
+
 	<%@ include file="../include/calander.jspf"%>
 
-	<ul class="nav justify-content-center mt-3">
-		<li class="nav-item mx-3"><a
-			class="nav-link btn btn-outline-secondary btn-sm btn-opt"
-			aria-current="page" href="#">週</a></li>
-		<li class="nav-item mx-3"><a
-			class="nav-link  btn btn-outline-secondary btn-sm btn-opt" href="#">月</a>
-		</li>
 
-	</ul>
+		
 
 	<div class="mx-5 mt-3">
 		<table class="table table-striped table-hover ">
 			<thead>
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">First</th>
-					<th scope="col">Last</th>
-					<th scope="col">Handle</th>
+					<th scope="col">交易時間</th>
+					<th scope="col">支出金額</th>
+					<th scope="col">存入金額</th>
+					<th scope="col">交易摘要</th>
+					<th scope="col">即時餘額</th>
+					<th scope="col">備註</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
+
+					<td>2023/11/26</td>
+					<td>1000</td>
+					<td>0</td>
+					<td>換匯-提款</td>
+					<td>5000</td>
+					<td>台幣帳戶</td>
 				</tr>
 				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
+
+					<td>2023/11/26</td>
+					<td>0</td>
+					<td>250</td>
+					<td>換匯-存入</td>
+					<td>250</td>
+					<td>外幣帳戶-日幣帳戶</td>
 				</tr>
+
 				<tr>
-					<th scope="row">3</th>
-					<td colspan="2">Larry the Bird</td>
-					<td>@twitter</td>
+					<td>2023/11/26</td>
+					<td>0</td>
+					<td>200</td>
+					<td>存款</td>
+					<td>5200</td>
+					<td>台幣帳戶</td>
 				</tr>
+
 			</tbody>
 		</table>
 	</div>

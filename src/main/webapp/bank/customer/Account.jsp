@@ -26,7 +26,7 @@
 
 </style>
 
-<h2 class="page-title text-center fw-bold mb-3">帳戶總覽</h2>
+<h2 class="page-title text-center fw-bold mb-3"><i class="bi bi-person-badge"></i>帳戶總覽</h2>
 
 <ul class="nav nav-tabs justify-content-center mt-5 ">
 

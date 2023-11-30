@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%
-
-	String error = (String)request.getAttribute("error");
-
-%>    
+<%
+String error = (String) request.getAttribute("error");
+%>
 
 <%@ include file="./include/header/header_index.jspf"%>
 
 <head>
 <style type="text/css">
-
+.slide-area{
+	margin-top: 50px
+}
 
 .btn {
 	background-color: rgb(225, 135, 127);
@@ -30,14 +30,21 @@
 	border-color: rgb(141, 171, 217)
 }
 
-.container{
-margin-bottom: 80px;
+.container {
+	margin-bottom: 80px;
+}
+.flag{
+aspect-ratio: 3 / 2; 
+  width: 100%; /* 也可以換成任何你想要的寬度 */
+  object-fit: cover;
+  object-position: center;
+
 }
 </style>
 
 </head>
 
-<div id="carouselExampleControls" class="carousel slide"
+<div id="carouselExampleControls" class="carousel slide slide-area"
 	data-bs-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
@@ -46,7 +53,7 @@ margin-bottom: 80px;
 		<div class="carousel-item">
 			<img src="../img/banner01.jpg" class="d-block w-100" alt="...">
 		</div>
-		<div class="carousel-item">
+		<div class="carousel-item ">
 			<img src="../img/banner01.jpg" class="d-block w-100" alt="...">
 		</div>
 	</div>
@@ -72,8 +79,8 @@ margin-bottom: 80px;
 
 				<div class="col">
 					<div class="card">
-						<img src="../img/cn.png" class="card-img-top" alt="..."
-							width="220" height="100px">
+						<img src="../img/cn.png" class="card-img-top flag" alt="..."
+							>
 						<div class="card-body">
 							<h5 class="card-title">人民幣</h5>
 							<h3 class="card-title">CNY</h3>
@@ -88,8 +95,8 @@ margin-bottom: 80px;
 				</div>
 				<div class="col">
 					<div class="card">
-						<img src="../img/jp.jpg" class="card-img-top" alt="..."
-							width="220" height="100px">
+						<img src="../img/jp.jpg" class="card-img-top flag" alt="..."
+							>
 						<div class="card-body">
 							<h5 class="card-title">日圓</h5>
 							<h3 class="card-title">JPY</h3>
@@ -104,8 +111,8 @@ margin-bottom: 80px;
 				</div>
 				<div class="col">
 					<div class="card">
-						<img src="../img/usa.jpg " class="card-img-top" alt="..."
-							width="220" height="100px">
+						<img src="../img/usa.jpg " class="card-img-top flag" alt="..."
+							>
 						<div class="card-body">
 							<h5 class="card-title">美元</h5>
 							<h3 class="card-title">USD</h3>
@@ -121,23 +128,25 @@ margin-bottom: 80px;
 
 			</div>
 			<div class=" mt-2 text-center">
-				<a href="#" class="text-center fw-bold mb-4">匯率查詢</a> <span>|</span>
+				<a href="#" class="text-center fw-bold mb-4 curr-search">匯率查詢</a> <span>|</span>
 				<a href="#" class="text-center fw-bold mb-4">匯率更新</a>
+
 			</div>
 		</div>
 
 
 		<div class="col border p-4  border-2 rounded  col-5">
-			<form method="post" action="./index">
+			<form method="post" action="./main">
 				<h4 class="fw-bolder text-center mb-4 title">網路銀行登入</h4>
-			<%
-	    	  	if(error != null) {
-	    	  		out.print("<p class='text-center text-danger fw-bold'>"+error+"</p>");
-	    	  	}
-	    	  %>
+				<%
+				if (error != null) {
+					out.print("<p class='text-center text-danger fw-bold'>" + error + "</p>");
+				}
+				%>
 
 				<div class="mb-0">
-					<input name="username" class="form-control" id="id" placeholder="身分證字號">
+					<input name="username" class="form-control" id="id"
+						placeholder="身分證字號">
 				</div>
 				<div class="mb-4">
 					<label for="exampleInputPassword1" class="form-label"></label> <input
@@ -167,4 +176,7 @@ margin-bottom: 80px;
 
 
 
+
 <%@ include file="./include/header/footer.jspf"%>
+<script src="../app/index_app.js"></script>
+
