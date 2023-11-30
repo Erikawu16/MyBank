@@ -14,6 +14,7 @@
 <style>
 .navbar {
 	background-color: rgb(225, 135, 127);
+	z-index: 10;
 }
 
 .backend a{
@@ -22,13 +23,14 @@ top:10px;
 right:20px;
 
 }
+
 </style>
 
 </head>
 
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light position-stiky top-0">
+	<nav class="navbar navbar-expand-lg navbar-light position-fixed top-0 w-100">
 		<div class="ms-1">
 			<a class="navbar-brand text-light" href="#">行動商業銀行</a>
 		</div>

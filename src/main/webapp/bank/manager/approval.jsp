@@ -16,12 +16,15 @@
 
 .btn-detail {
 	background-color: rgb(139, 154, 139);
+} 
+.cotainer{
+margin-top:80px; 
 }
 </style>
 
 </head>
 <body>
-	<div class="w-100 ">
+	<div class="cotainer ">
 
 		<ul class="nav nav-pills justify-content-center mt-5 ">
 			<li class="nav-item  " role="presentation">

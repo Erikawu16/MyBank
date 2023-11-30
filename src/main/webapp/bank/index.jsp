@@ -8,6 +8,10 @@ String error = (String) request.getAttribute("error");
 
 <head>
 <style type="text/css">
+.slide-area{
+	margin-top: 50px
+}
+
 .btn {
 	background-color: rgb(225, 135, 127);
 	border-color: transparent;
@@ -33,7 +37,7 @@ String error = (String) request.getAttribute("error");
 
 </head>
 
-<div id="carouselExampleControls" class="carousel slide"
+<div id="carouselExampleControls" class="carousel slide slide-area"
 	data-bs-ride="carousel">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
@@ -42,7 +46,7 @@ String error = (String) request.getAttribute("error");
 		<div class="carousel-item">
 			<img src="../img/banner01.jpg" class="d-block w-100" alt="...">
 		</div>
-		<div class="carousel-item">
+		<div class="carousel-item ">
 			<img src="../img/banner01.jpg" class="d-block w-100" alt="...">
 		</div>
 	</div>
@@ -117,8 +121,9 @@ String error = (String) request.getAttribute("error");
 
 			</div>
 			<div class=" mt-2 text-center">
-				<a href="#" class="text-center fw-bold mb-4">匯率查詢</a> <span>|</span>
+				<a href="#" class="text-center fw-bold mb-4 curr-search">匯率查詢</a> <span>|</span>
 				<a href="#" class="text-center fw-bold mb-4">匯率更新</a>
+
 			</div>
 		</div>
 
@@ -166,5 +171,5 @@ String error = (String) request.getAttribute("error");
 
 
 <%@ include file="./include/header/footer.jspf"%>
-
+<script src="../app/index_app.js"></script>
 
