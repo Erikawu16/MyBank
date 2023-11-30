@@ -19,6 +19,8 @@ public class login_customerServlet extends HttpServlet {
 		String username = req.getParameter("username");
 
 		String password = req.getParameter("password");
+		System.out.println(username);
+		System.out.println(password);
 
 		if ("abc".equals(username) && "123".equals(password)) {
 

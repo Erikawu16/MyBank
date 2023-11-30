@@ -5,16 +5,20 @@
 <head>
 <meta charset="UTF-8">
 <title>MyAccount</title>
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	    
-	   <style>
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
 .navbar {
 	background-color: rgb(225, 135, 127);
 }
-
 
 .nav-item:hover {
 	background-color: rgb(141, 171, 217);
@@ -22,23 +26,25 @@
 	color: black !important;
 }
 
-.body{
-padding-top: 20px;
+.body {
+	padding-top: 20px;
 }
+
 .page-title {
 	margin-top: 80px;
 }
 
 .navbar {
-padding:0.5rem !important;
+	padding: 0.5rem !important;
 }
 </style>
 </head>
 
-<body >
-	<nav class="navbar navbar-expand-lg navbar-light position-fixed top-0 w-100">
+<body>
+	<nav
+		class="navbar navbar-expand-lg navbar-light position-fixed top-0 w-100">
 		<div class="container-fluid">
-			<a class="navbar-brand text-light ms-1">行動商業銀行</a>
+			<a class="navbar-brand text-light ms-1">MyBank商業銀行</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -47,21 +53,31 @@ padding:0.5rem !important;
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="./Account.jsp">帳戶總覽</a></li>
-					<li class="nav-item"><a class="nav-link text-white" href="./Currency.jsp">我要換匯</a></li>
-					<li class="nav-item"><a class="nav-link text-white" href="./Recorder.jsp">交易查詢</a></li>
-					<li class="nav-item"><a class="nav-link text-white" href="./member_box.jsp">會員專區</a></li>
-					<li class="nav-item"><a class="nav-link text-white   d-lg-none" href="./member.jsp">會員信箱</a></li>
-					<li class="nav-item"><a class="nav-link text-white " >會員登出</a></li>
-					</ul>
-							
+					<li class="nav-item px-2"><a class="nav-link text-white"
+						href="./Account.jsp"><i class="bi bi-person-badge"></i>帳戶總覽</a></li>
+					<li class="nav-item px-2"><a class="nav-link text-white"
+						href="./Currency.jsp"><i class="bi bi-currency-exchange"></i>我要換匯</a></li>
+					
+					<li class="nav-item px-2"><a class="nav-link text-white"
+						href="./Recorder.jsp"><i class="bi bi-journal-bookmark-fill"></i>交易查詢</a></li>
+					
+					<li class="nav-item px-2"><a class="nav-link text-white"
+						href="./member_box.jsp"><i class="bi bi-person-circle "></i>會員專區</a></li>
+					
+					<li class="nav-item px-2">
+						<i
+							class="bi bi-box-arrow-right nav-link text-white  d-lg-none "
+							role="button" onclick="window.location.href='./logout'">會員登出</i></li>
+
+				</ul>
+
 			</div>
-			<i class="bi bi-person-circle text-light h5 mb-0 d-none d-lg-flex"></i>
-			<a  class="nav-link text-white d-none d-lg-block" href="#"> <i class="bi bi-envelope-fill text-light h5 mb-0 ms-3 d-none d-lg-flex" ></i></a>
-			
-			<i class="bi bi-box-arrow-right text-light ml-3 d-none d-lg-block" role="button" onclick="window.location.href='./logout'">Logout</i>
-	  
-			
+
+
+			<i class="bi bi-box-arrow-right nav-link text-white d-none d-lg-block"
+				role="button" onclick="window.location.href='./logout'">Logout</i>
+
+
 		</div>
 	</nav>
 </body>

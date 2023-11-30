@@ -16,6 +16,25 @@ public class registerServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
+		String name = req.getParameter("name");
+		String Id = req.getParameter("Id");
+		String date = req.getParameter("date");
+		String gender = req.getParameter("gender");
+		String email = req.getParameter("email");
+		String password = req.getParameter("password");
+		String Residences = req.getParameter("Residences");
+		
+		
+		System.out.println(Id);
+		System.out.println(name);
+		System.out.println(date);
+		System.out.println(gender);
+		System.out.println(email) ;
+		System.out.println(password);
+		System.out.println(Residences);
+		
+		
+		
 	RequestDispatcher rd = req.getRequestDispatcher("./register_finish.jsp");
 		rd.forward(req, resp);
 	}
