@@ -64,7 +64,7 @@
 			<div class="card-body">
 				<h5 class="card-title">000-000-000-000</h5>
 				<p class="card-text">$5000.00</p>
-				<a href="#" class="btn ">查看帳戶資訊</a>
+				<a href="./Recorder_tw.jsp" class="btn ">查看帳戶資訊</a>
 			</div>
 		</div>
 
@@ -98,7 +98,7 @@
 				<p class="card-text">
 					約為台幣<span>$5000.00</span>
 				</p>
-				<a href="#" class="btn ">查看交易紀錄</a>
+				<a href="./Recorder_usa.jsp" class="btn ">查看交易紀錄</a>
 			</div>
 		</div>
 
@@ -110,7 +110,7 @@
 				<p class="card-text">
 					約為台幣<span>$5000.00</span>
 				</p>
-				<a href="#" class="btn ">查看交易紀錄</a>
+				<a href="./Recorder_jp.jsp" class="btn ">查看交易紀錄</a>
 			</div>
 		</div>
 
