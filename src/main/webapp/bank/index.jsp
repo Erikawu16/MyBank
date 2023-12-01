@@ -80,7 +80,7 @@ String error = (String) request.getAttribute("error");
 		<p>自動化服務|智慧現金管理|便捷融資服務|收款服務|轉帳服務|</p>
 
 	</div>
-	<div class="banner-btn">
+	<div class="banner-btn mt-5">
 		<a href="./register.jsp"  type="button" class="btn btn-outline-light btn-secondary mx-2">馬上註冊</a>
 		<a  href="#login" type="button" class="btn btn-outline-secondary btn-light mx-2">立即登入</a>
 	</div>
