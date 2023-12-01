@@ -58,7 +58,7 @@ form {
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light position-stiky top-0">
 		<div class="ms-1">
-			<a class="navbar-brand text-light" href="#">行動商業銀行</a>
+			<a class="navbar-brand text-light" href="#">MyBank後台系統</a>
 		</div>
 		<div class="backend " id="">
 			<a class="text-white" href="../index.jsp">前台登入</a>

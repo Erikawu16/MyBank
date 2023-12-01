@@ -64,35 +64,38 @@
 		<!-- 基本資料輸入-->
 
 		<div class="col-md-3 ">
-			<label for="name" class="form-label  fs-5 fw-bold">姓名:</label> <input
+			<label for="name" class="form-label  fs-5 fw-bold">姓名:</label> 
+			<input
 				type="text" class="form-control" id="name" name="name" value=""
 				required>
-			<div class="valid-feedback">此為必填項目</div>
+			<div class="invalid-feedback">此為必填項目</div>
 		</div>
+
 
 		<div class="col-md-3">
 			<label for="Id" class="form-label fs-5 fw-bold">身份證字號:</label>
 			 <input
 				type="text" class="form-control" id="Id" name="Id" value=" "
 				required>
-			<div class="valid-feedback">此為必填項目</div>
+			<div class="invalid-feedback">此為必填項目</div>
 		</div>
+		
 		<div class="col-md-3">
 			<label for="date" class="form-label  fs-5 fw-bold">出生年月日:</label> <input
 				type="date" name="date" id="date" class="form-control" required>
-			<div class="valid-feedback">此為必填項目</div>
+			<div class="invalid-feedback">此為必填項目</div>
 		</div>
 		<div class="col-md-3  align-self-end ">
-			<input type="radio" class="form-check-input" id="M" name="gender"
+			<input type="radio" class="form-check-input" id="M" name="gender" value="M"
 				required> <label class="form-check-label" for="gender">男生</label>
-			<input type="radio" class="form-check-input" id="F" name="gender"
-				required> <label class="form-check-label" for="gender">女生</label>
+			<input type="radio" class="form-check-input" id="F" name="gender"value="F"
+				required> <label class="form-check-label" for="gender" >女生</label>
 		</div>
 
 
 		<div class="col-md-3">
 			<label for="email"class="form-label fs-5 fw-bold">電子郵件：</label> 
-			<input type="email" id="email" class="form-control"
+			<input type="email" id="email" class="form-control" name="email"
 				required>
 			<div class="valid-feedback">此為必填項目</div>
 		</div>
@@ -100,7 +103,7 @@
 
 <div class="col-md-3">
       <label for="password" class="form-label fs-5 fw-bold">密碼：</label>
-      <input type="password" id="password"   class="form-control" required>
+      <input type="password" id="password"  name="password"  class="form-control" required>
     </div>
   <div class="col-md-3">
       <label for="confirmPassword" class="form-label fs-5 fw-bold">確認密碼：</label>
@@ -197,7 +200,7 @@
 
 
 
-<script>
+<script type="text/javascript">
 	//Example starter JavaScript for disabling form submissions if there are invalid fields
 	(function() {
 		'use strict'
@@ -217,6 +220,8 @@
 			}, false)
 		})
 	})()
+	
+	
 </script>
 
 <script>
