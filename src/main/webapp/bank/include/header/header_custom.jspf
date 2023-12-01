@@ -62,10 +62,14 @@
 						href="./Recorder.jsp"><i class="bi bi-journal-bookmark-fill"></i>交易查詢</a></li>
 					
 					<li class="nav-item px-2"><a class="nav-link text-white"
+<<<<<<< HEAD
 						href="./member_data.jsp"><i class="bi bi-person-circle "></i>會員專區</a></li>
 					
 					<li class="nav-item px-2"><a class="nav-link text-white"
 						href="./member_box.jsp"><i class="bi bi-envelope-fill "></i>會員信箱</a></li>
+=======
+						href="./member_box.jsp"><i class="bi bi-person-circle "></i>會員專區</a></li>
+>>>>>>> 73588ede17ca1f3eeff22090d1bc1b32151547f7
 					
 					<li class="nav-item px-2">
 						<i
@@ -76,8 +80,12 @@
 
 			</div>
 
+<<<<<<< HEAD
 			
 			
+=======
+
+>>>>>>> 73588ede17ca1f3eeff22090d1bc1b32151547f7
 			<i class="bi bi-box-arrow-right nav-link text-white d-none d-lg-block"
 				role="button" onclick="window.location.href='./logout'">Logout</i>
 
