@@ -1,29 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-	
-	
-	
+
+
+
+
 <style>
-
-
-
-
-
 </style>
 
 
-<div class="mx-5 mt-3 border table-responsive table-bordered">
+<div
+	class="mx-5 mt-3 border table-responsive table-bordered w-75 mx-auto">
 	<table class="table table-hover table align-middle ">
 		<thead>
 			<tr class="table-secondary text-center">
-				<th scope="col " >幣別</th>
-				<th scope="col" colspan="2" >現金匯率</th>
-
-				<th scope="col" colspan="2" >即期匯率</th>
+				<th scope="col" colspan="3">幣別</th>
+				<th scope="col" colspan="2">現金匯率</th>
+				<th scope="col" colspan="2">即期匯率</th>
 
 			</tr>
 			<tr class="table-secondary text-center">
+				<th scope="col" class="hidden"></th>
 				<th scope="col" class="hidden"></th>
 				<th scope="col">本行買入</th>
 				<th scope="col">本行賣出</th>
@@ -37,27 +33,81 @@
 		</thead>
 		<tbody class="text-center">
 			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>@mdo</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-				<td>@fat</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-				<td>@fat</td>
-			</tr>
+
+				<td><img src="../../img/flag/flag_us.png" width=20px;>&nbsp美金USD</td>
 			
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+			<tr>
+				<td><img src="../../img/flag/flag_cn.png" width=20px;>&nbsp人民幣CNY</td>
+			
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+			<tr>
+				<td><img src="../../img/flag/flag_jp.png" width=20px;>&nbsp日幣JPY</td>
+			
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+
+			<tr>
+				<td><img src="../../img/flag/flag_cn.png" width=20px;>&nbsp港幣HKD</td>
+				
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+			<tr>
+				<td><img src="../../img/flag/flag_eu.png" width=20px;>&nbsp歐元EUR</td>
+				
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+			<tr>
+				<td><img src="../../img/flag/flag_au.png" width=20px;>&nbsp澳幣AUD</td>
+				
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+			<tr>
+				<td><img src="../../img/flag/flag_sg.png" width=20px;>&nbsp新加玻幣SGD</td>
+		
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+			<tr>
+				<td><img src="../../img/flag/flag_tai.png" width=20px;>&nbsp泰銖THB</td>
+				
+				<td><i class="bi bi-calendar3"></i></td>
+				<td>31.4</td>
+				<td>31.51</td>
+				<td>31.16</td>
+				<td>31.71</td>
+			</tr>
+
+
 		</tbody>
 	</table>
 </div>

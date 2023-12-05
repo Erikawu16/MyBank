@@ -23,6 +23,9 @@
 	width: 80vw;
 }
 
+.tab-content{
+margin-bottom: 100px;
+}
 
 </style>
 
@@ -44,7 +47,7 @@
 
 
 <div
-	class="tab-content text-center d-flex flex-column align-items-center  mx-auto"
+	class="tab-content text-center d-flex flex-column align-items-center  mx-auto "
 	id="myTabContent">
 
 	<div class="tab-pane fade show active  " id="p1" role="tabpanel"
@@ -73,14 +76,13 @@
 
 
 
-	</hr>
 
 
 	<div class="tab-pane fade  " id="p2" role="tabpanel"
 		aria-labelledby="p2-tab">
 
 		<div class="mt-5 mb-3 ">
-			<p4 class="fw-bold fs-1">我的外幣帳戶</p4>
+			<h4 class="fw-bold fs-1">我的外幣帳戶</h4>
 		</div>
 		<div class="btn-group" role="group"
 			aria-label="Basic outlined example">

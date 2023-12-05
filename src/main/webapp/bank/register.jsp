@@ -29,12 +29,12 @@
 	background: rgb(141, 171, 217);
 }
 </style>
-<div class="border mx-5 mt-5 p-3">
-	<h4 class="text-center">開戶提醒</h4>
-	<div class="text-center w-50 mx-auto">
+<div class="border  mt-5 mb-5 p-3 w-75 mx-auto">
+	<h4 class="text-center fw-bold"><i class="bi bi-question-circle-fill"></i>開戶提醒</h4>
+	<div class="text-center w-75 mx-auto">
 		<ul style="list-style-type: none" class="text-start">
-			<li><i class="bi bi-1-square-fill"></i>&nbsp;請準備證件：身分證和第二證件（健保卡、駕照、護照擇一）</li>
-			<li><i class="bi bi-2-square-fill"></i>&nbsp;填寫個人基本資料</li>
+			<li><i class="bi bi-1-square-fill"></i>&nbsp;請準備證件：身分證和第二證件（健保卡、駕照、護照擇一</li>
+			<li><i class="bi bi-2-square-fill d-inline"></i>&nbsp;填寫個人基本資料</li>
 			<li><i class="bi bi-3-square-fill"></i>&nbsp;審核同過後,收到專屬卡片</li>
 		</ul>
 	</div>
@@ -51,12 +51,9 @@
 <!-- 第一部分 -->
 
 <div class="w-75 mx-auto border border-3 rounded p-4  mb-5">
-	<h3 class="text-center step w-25 mx-auto fw-bold">1.請填寫基本資料</h3>
+	<h3 class="text-center step  fw-bold">1.請填寫基本資料</h3>
 	<div class="w-75 mx-auto mt-3 mb-5 ">
-		<div class="progress">
-			<div class="progress-bar" role="progressbar" style="width: 25%;"
-				aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">25%</div>
-		</div>
+		
 	</div>
 
 	<form class="row g-3 needs-validation" method="post"
@@ -112,7 +109,6 @@
 
 
 
-
 		<!-- 稅務身分 -->
 		<div class="col-12 pb-1 ">
 			<h2 class="p2 fw-bold fs-5 d-inline">【稅務身分】</h2>
@@ -148,11 +144,8 @@
 
 		<!-- 第二部分 -->
 		<div class="w-75 mx-auto mt-5 mb-3 d-block">
-			<h3 class="text-center step w-50 mx-auto fw-bold mb-3">2.請上傳證件資料</h3>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 50%;"
-					aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">50%</div>
-			</div>
+			<h3 class="text-center step  fw-bold mb-3">2.請上傳證件資料</h3>
+			
 		</div>
 
 		<div>
@@ -165,11 +158,8 @@
 
 		<!-- 第三部分 -->
 		<div class="w-75 mx-auto mt-5 mb-3 ">
-			<h3 class="text-center step w-50 mx-auto fw-bold mb-3">3.資料確認送出</h3>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 75%;"
-					aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-			</div>
+			<h3 class="text-center step  fw-bold mb-3">3.資料確認送出</h3>
+			
 		</div>
 
 		<div class="mb-5">
@@ -186,7 +176,7 @@
 					</div>
 				</div>
 				<div class="col-12 text-center my-3">
-					<button class="btn btn-send" type="submit">資料送出</button>
+					<button class="btn btn-send" type="submit" onclick="uploadImages()">資料送出</button>
 				</div>
 			</div>
 
@@ -224,15 +214,3 @@
 	
 </script>
 
-<script>
-    
-      // 簡單的驗證邏輯
-      if (password !== confirmPassword) {
-        alert("密碼和確認密碼不匹配");
-      } else {
-        // 這裡可以添加將用戶信息提交到後端的代碼，進行進一步的驗證和處理
-        alert("註冊成功！");
-        // 這裡可以重定向到登錄頁面或其他頁面
-      }
-    });
-  </script>
