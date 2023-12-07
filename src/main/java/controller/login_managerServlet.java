@@ -16,24 +16,26 @@ public class login_managerServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		String username = req.getParameter("username");
-
-		String password = req.getParameter("password");
-
-		if ("abc".equals(username) && "123".equals(password)) {
-
-			HttpSession session = req.getSession();
-			session.setAttribute("isLogin", true);
-			session.setAttribute("username", username);
-
-			resp.sendRedirect("./approval.jsp");
-			return;
-
-//			RequestDispatcher rd = req.getRequestDispatcher("./approval.jsp");
-//			rd.forward(req, resp);
-		}
-		req.setAttribute("error", "帳號或密碼輸入錯誤!");
-		RequestDispatcher rd = req.getRequestDispatcher("./login.jsp");
+		
+		RequestDispatcher rd = req.getRequestDispatcher("/mvc/approval/viewMembers");
 		rd.forward(req, resp);
+//		String username = req.getParameter("username");
+//
+//		String password = req.getParameter("password");
+//
+//		if ("abc".equals(username) && "123".equals(password)) {
+//
+//			HttpSession session = req.getSession();
+//			session.setAttribute("isLogin", true);
+//			session.setAttribute("username", username);
+//
+//			resp.sendRedirect("./approval.jsp");
+//			return;
+//
+//
+//		}
+//		req.setAttribute("error", "帳號或密碼輸入錯誤!");
+//		RequestDispatcher rd = req.getRequestDispatcher("./login.jsp");
+//		rd.forward(req, resp);
 	}
 }

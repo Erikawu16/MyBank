@@ -75,34 +75,7 @@
 					<button type="button" class=" btn btn-secondary">未通過</button></td>
 			</tr>
 
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>2023/11/23 <br>10:20:53
-				</td>
-				<td>000-000-000-000</td>
-				<td>
-					<button type="button" class="btn btn-secondary"
-						data-bs-toggle="modal" data-bs-target="#exampleModal">明細
-					</button>
-				</td>
-				<td><button type="button" class=" btn btn-primary">通過</button>
-					<button type="button" class=" btn btn-secondary">未通過</button></td>
-			</tr>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>2023/11/23 <br>10:20:53
-				</td>
-				<td>000-000-000-000</td>
-				<td>
-					<button type="button" class="btn btn-secondary"
-						data-bs-toggle="modal" data-bs-target="#exampleModal">明細
-					</button>
-				</td>
-				<td><button type="button" class=" btn btn-primary">通過</button>
-					<button type="button" class=" btn btn-secondary">未通過</button></td>
-			</tr>
+			
 		</tbody>
 	</table>
 

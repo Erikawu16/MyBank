@@ -73,7 +73,7 @@ form {
 
 	<div class="d-flex justify-content-center align-items-center vh-100">
 		<form class="needs-validation" novalidate method="post"
-			action="./login">
+			action="../../mvc/approval/viewMembers">
 			<h4 class="text-center">Login</h4>
 			<%
 	    	  	if(error != null) {
