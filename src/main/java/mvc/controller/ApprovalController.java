@@ -117,8 +117,7 @@ public class ApprovalController {
 
 	@RequestMapping(value = "/{memberId}/updatestatus", method = { RequestMethod.GET,
 			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
-	@ResponseBody
-
+	//@ResponseBody
 	public String updateName(@PathVariable("memberId") Integer memberId, 
 			@RequestParam("status") String newstatus) {
 		Optional<Map<String, Object>> mapOpt = Members.stream()
@@ -129,9 +128,12 @@ public class ApprovalController {
 		if (mapOpt != null) {
 			Map<String, Object> member = mapOpt.get();
 			member.put("status", newstatus);
+
 			Memberpass.add(member);
 			Members.remove(member);
-			return "狀態修改成功"+member ;
+
+			return "redirect:/mvc/approval/viewMembers";
+			
 			
 		}
 		return "修改失敗";
