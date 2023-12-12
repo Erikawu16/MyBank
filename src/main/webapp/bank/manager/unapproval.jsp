@@ -76,24 +76,25 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach var="member" items="${ Members }">
+							<c:forEach var="newmember" items="${ UnapprovalMember }">
 								<tr>
-									<th scope="row">${ member.memberId }</th>
-									<td>${ member.name }</td>
-									<td>${ member.date }</td>
-									<td>${ member.account }</td>
+									<th scope="row">${ newmember.memberId }</th>
+									<td>${ newmember.name }</td>
+									<td>${ newmember.date }</td>
+									<td>${ newmember.account }</td>
 
 									<td>
 										<button type="button" class="btn btn-secondary"
 											data-bs-toggle="modal" data-bs-target="#exampleModal">明細
 										</button>
 									</td>
-									<td>${ member.status }</td>
+									<td>${ newmember.status }</td>
 									<td>
 										<button type="button" class=" btn btn-primary"
-											onclick="window.top.location.href='/MyBank/mvc/approval/${ member.memberId }/updatestatus?status=true'">通過</button>
+											onclick="window.top.location.href='/MyBank/mvc/approval/${ newmember.memberId }/updatestatustotrue?status=true'">通過</button>
 
-										<button type="button" class=" btn btn-secondary">未通過</button>
+										<button type="button" class=" btn btn-secondary"
+										onclick="window.top.location.href='/MyBank/mvc/approval/${ newmember.memberId }/updatestatustofalse?status=false'">未通過</button>
 
 
 									</td>

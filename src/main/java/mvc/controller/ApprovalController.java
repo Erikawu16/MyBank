@@ -26,78 +26,38 @@ import org.springframework.web.servlet.ModelAndView;
 import model.Member;
 
 /**
- * 會議室預訂系統 假設您正在為一家公司開發一個會議室預訂系統。您需要實現一個控制器， 該控制器可以處理會議室的預訂請求、取消請求以及查詢當前預訂狀態。
- * 
+ * 會員註冊後資料審核系統
  * 功能要求：
- * -----------------------------------------------------------------------------------------------
- * 1.審核會員資料 透過按下按鈕通過或不通過更改會員狀態 返回：審核結果
+ * -------------------------
+ * 1. 會員註冊
+ * 2.查看未審核會員
+ * 3.查看已通過會員
+ * 4.1.會員審核功能(pass)
+ * 4.2.會員審核功能(false)
+ * -------------------------
  * 
- * 範例：http://localhost:8080/SpringMVC/mvc/mybank/appproval/1
- * -----------------------------------------------------------------------------------------------
- * 
- * 2.修改會員狀態 返回：是否變動成功與新審核狀態 路徑：/booking/cancelBooking/{bookingId} 參數：預訂ID
- * (bookingId) 範例： http://localhost:8080/SpringMVC/mvc/booking/cancelBooking/1
- * -----------------------------------------------------------------------------------------------
- * 
- * 3.查看所有會員： 路徑：/booking/viewBookings 返回：當前所有預訂的列表
- * 範例：http://localhost:8080/MyBank/mvc/approval/viewMenbers
- *
  */
 
 @Controller
 @RequestMapping("/approval")
 public class ApprovalController {
 
-	private static List<Map<String, Object>> Members = new CopyOnWriteArrayList<>();
-	private static List<Map<String, Object>> Memberpass = new CopyOnWriteArrayList<>();
+ private static List<Map<String, Object>> UnapprovalMember = new CopyOnWriteArrayList<>();
+ private static List<Map<String, Object>> ApprovaledMember = new CopyOnWriteArrayList<>();
+ 
 
-// 預約號碼: 每次可用 bookingIdCount.incrementAndGet() 來取得
-	private AtomicInteger memberIdCount = new AtomicInteger(0);
+// 註冊編號: 每次可用 memberIdCount.incrementAndGet() 來取得
+ private AtomicInteger memberIdCount = new AtomicInteger(0);
+ 
 
-//=====================================================================
-	// http://localhost:8080/MyBank/mvc/approval/viewMembers
-	// 查看未審核會員
-	@RequestMapping(value = "/viewMembers", method = { RequestMethod.GET,
-			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
-	
-	public ModelAndView viewMembers() {
-
-		ModelAndView mv = new ModelAndView();
-		// jsp+model資料配置好
-		mv.addObject("Members", Members);
-		mv.setViewName("/bank/manager/unapproval.jsp");
-		return mv;
-	}
-
-	
-	
-	 //http://localhost:8080/MyBank/mvc/approval/viewpassMembers
-	 //查看通過會員
-	@RequestMapping(value = "/viewpassMembers", method = { RequestMethod.GET,
-			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
-	
-	
-	
-	public ModelAndView viewpassMembers() {
-
-		ModelAndView mv = new ModelAndView();
-		// jsp+model資料配置好
-		mv.addObject("Memberpass", Memberpass);
-		mv.setViewName("/bank/manager/approval.jsp");
-		return mv;
-	}
-	
-//=====================================================================
-	// 增加會員
-
+//1.會員註冊
 	@RequestMapping(value = "/register", method = { RequestMethod.GET,
 			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
 	@ResponseBody
-
+	
 	public String register(@RequestParam(name = "name") String name, @RequestParam(name = "account") String account,
 			@RequestParam(name = "date") String date, @RequestParam(name = "status") String status)
 			throws ParseException {
-
 		// 會員號碼
 		int memberId = memberIdCount.incrementAndGet();
 		// 預約資訊
@@ -107,38 +67,76 @@ public class ApprovalController {
 		MemberList.put("account", account);
 		MemberList.put("date", date);
 		MemberList.put("status", status);
-		Members.add(MemberList);
+		UnapprovalMember.add(MemberList);
 		return "新增成功" + MemberList;
 
 	}
-//	3.審核會員 路徑：/booking/{bookId}/updateName 返回:是否變動成功
+//2. 查看未審核會員
+// http://localhost:8080/MyBank/mvc/approval/viewUnapprovalMember
+@RequestMapping(value = "/viewUnapprovalMember", method = { RequestMethod.GET,
+			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
+	
+	public ModelAndView viewUnapprovalMember() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("UnapprovalMember",UnapprovalMember);
+		mv.setViewName("/bank/manager/unapproval.jsp");
+		return mv;
+	}
 
-	// http://localhost:8080/MyBank/mvc/approval/1/updatestatus?status=true
+//3.查看已審查會員
+//http://localhost:8080/MyBank/mvc/approval/viewApprovaledMember
+	@RequestMapping(value = "/viewApprovaledMember", method = { RequestMethod.GET,
+			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
+	
+	public ModelAndView viewApprovaledMember() {
+		ModelAndView mv = new ModelAndView();
+		//mv.addObject("UnapprovalMember",UnapprovalMember);
+		mv.addObject("ApprovaledMember", ApprovaledMember);
+		mv.setViewName("/bank/manager/approvaled.jsp");
+		return mv;
+	}
+	
+	
+//	4.1.會員審核功能(pass) 
+// http://localhost:8080/MyBank/mvc/approval/1/updatestatustotrue?status=true
 
-	@RequestMapping(value = "/{memberId}/updatestatus", method = { RequestMethod.GET,
+	@RequestMapping(value = "/{memberId}/updatestatustotrue", method = { RequestMethod.GET,
 			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
 	//@ResponseBody
-	public String updateName(@PathVariable("memberId") Integer memberId, 
+	public String  updateStatusToTrue(
+			@PathVariable("memberId") Integer memberId, 
 			@RequestParam("status") String newstatus) {
-		Optional<Map<String, Object>> mapOpt = Members.stream()
+		Optional<Map<String, Object>> mapOpt = UnapprovalMember.stream()
 				.filter(member -> member.get("memberId").equals(memberId)).findFirst();
-	
 		
-		
-		if (mapOpt != null) {
+		if (mapOpt.isPresent()) {
 			Map<String, Object> member = mapOpt.get();
 			member.put("status", newstatus);
-
-			Memberpass.add(member);
-			Members.remove(member);
-
-			return "redirect:/mvc/approval/viewMembers";
-			
-			
+			ApprovaledMember.add(member);
+			UnapprovalMember.remove(member);
+			return "redirect:/mvc/approval/viewUnapprovalMember";
 		}
 		return "修改失敗";
 	}
 	
+//4.2.會員審核功能(false)
+ //http://localhost:8080/MyBank/mvc/approval/1/updatestatustofalse?status=false
+	@RequestMapping(value = "/{memberId}/updatestatustofalse", method = { RequestMethod.GET,
+			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
+	//@ResponseBody
+	public String updateStatusToFalse(@PathVariable("memberId") Integer memberId, 
+			@RequestParam("status") String newstatus) {
+		Optional<Map<String, Object>> mapOpt = UnapprovalMember.stream()
+				.filter(member -> member.get("memberId").equals(memberId)).findFirst();
+		
+		if (mapOpt.isPresent()) {
+			Map<String, Object> member = mapOpt.get();
+			member.put("status", newstatus);
+			 ApprovaledMember.add(member);
+			 UnapprovalMember.remove(member);
+			return "redirect:/mvc/approval/viewUnapprovalMember";
+		}
+		return "修改失敗";
+	}
 
-	
 }
