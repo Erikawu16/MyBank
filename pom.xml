@@ -21,6 +21,7 @@
 				</excludes>
 			</resource>
 		</resources>
+		
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -35,6 +36,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	
 <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.3.25.RELEASE</spring.version>

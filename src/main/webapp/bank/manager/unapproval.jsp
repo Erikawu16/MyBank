@@ -35,8 +35,6 @@
 </head>
 <body>
 	<div class="cotainer ">
-
-
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModal" tabindex="-1"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -51,7 +49,6 @@
 								<img src="../../img/idexample.jpg" class="card-img-top flag"
 									alt="..."> <img src="../../img/idexample.jpg"
 									class="card-img-top flag" alt="...">
-
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary"
@@ -71,7 +68,7 @@
 								<th scope="col">申請時間</th>
 								<th scope="col">申請帳號</th>
 								<th scope="col">資料明細</th>
-								<th scope="col">status</th>
+								
 								<th scope="col" colspan="2">審核結果</th>
 							</tr>
 						</thead>
@@ -88,7 +85,7 @@
 											data-bs-toggle="modal" data-bs-target="#exampleModal">明細
 										</button>
 									</td>
-									<td>${ newmember.status }</td>
+
 									<td>
 										<button type="button" class=" btn btn-primary"
 											onclick="window.top.location.href='/MyBank/mvc/approval/${ newmember.memberId }/updatestatustotrue?status=true'">通過</button>
@@ -96,25 +93,14 @@
 										<button type="button" class=" btn btn-secondary"
 										onclick="window.top.location.href='/MyBank/mvc/approval/${ newmember.memberId }/updatestatustofalse?status=false'">未通過</button>
 
-
 									</td>
 								</tr>
 
 							</c:forEach>
 						</tbody>
 					</table>
-
 				</div>
-
-
-
-			</div>
-
-
-			
-	
-
-
+</div>
 </body>
 
 </html>

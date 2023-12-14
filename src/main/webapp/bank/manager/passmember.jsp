@@ -42,8 +42,6 @@
 					<button type="button" class="btn btn-outline-secondary  mx-2" onclick="window.top.location.href='/MyBank/mvc/approval/viewPassMember'">查詢通過資料</button>
 					<button type="button" class="btn btn-outline-secondary  mx-2" onclick="window.top.location.href='/MyBank/mvc/approval/viewFalseMember'">查詢未通過資料</button>
 
-				
-				
 				</div>
 				
 
@@ -60,13 +58,13 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach var="member" items="${ApprovaledMember}">
+							<c:forEach var="passmember" items="${PassMember}">
 								<tr>
-									<th scope="row">${ member.memberId }</th>
-									<td>${ member.name }</td>
-									<td>${ member.date }</td>
-									<td>${ member.account }</td>
-									<td>${ member.status }</td>
+									<th scope="row">${ passmember.memberId }</th>
+									<td>${passmember.name }</td>
+									<td>${ passmember.date }</td>
+									<td>${ passmember.account }</td>
+									<td>${ passmember.status }</td>
 									
 								</tr>
 

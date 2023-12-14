@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(value = "/bank/register")
+//@WebServlet(value = "/bank/register")
 public class registerServlet extends HttpServlet {
 
 	@Override

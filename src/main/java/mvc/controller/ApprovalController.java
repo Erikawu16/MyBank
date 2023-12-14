@@ -31,9 +31,11 @@ import model.Member;
  * -------------------------
  * 1. 會員註冊
  * 2.查看未審核會員
- * 3.查看已通過會員
+ * 3.查看已審核會員
  * 4.1.會員審核功能(pass)
  * 4.2.會員審核功能(false)
+ * 5.查看通過會員
+ * 6.查看未通過會員
  * -------------------------
  * 
  */
@@ -44,12 +46,13 @@ public class ApprovalController {
 
  private static List<Map<String, Object>> UnapprovalMember = new CopyOnWriteArrayList<>();
  private static List<Map<String, Object>> ApprovaledMember = new CopyOnWriteArrayList<>();
+ private static List<Map<String, Object>> PassMember = new CopyOnWriteArrayList<>();
+ private static List<Map<String, Object>> FalseMember = new CopyOnWriteArrayList<>();
  
-
 // 註冊編號: 每次可用 memberIdCount.incrementAndGet() 來取得
  private AtomicInteger memberIdCount = new AtomicInteger(0);
  
-
+ 
 //1.會員註冊
 	@RequestMapping(value = "/register", method = { RequestMethod.GET,
 			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
@@ -69,8 +72,9 @@ public class ApprovalController {
 		MemberList.put("status", status);
 		UnapprovalMember.add(MemberList);
 		return "新增成功" + MemberList;
-
 	}
+	
+	
 //2. 查看未審核會員
 // http://localhost:8080/MyBank/mvc/approval/viewUnapprovalMember
 @RequestMapping(value = "/viewUnapprovalMember", method = { RequestMethod.GET,
@@ -83,7 +87,7 @@ public class ApprovalController {
 		return mv;
 	}
 
-//3.查看已審查會員
+//3.查看已審核會員
 //http://localhost:8080/MyBank/mvc/approval/viewApprovaledMember
 	@RequestMapping(value = "/viewApprovaledMember", method = { RequestMethod.GET,
 			RequestMethod.POST }, produces = "text/plain;charset=utf-8")
@@ -112,6 +116,7 @@ public class ApprovalController {
 		if (mapOpt.isPresent()) {
 			Map<String, Object> member = mapOpt.get();
 			member.put("status", newstatus);
+			PassMember.add(member);
 			ApprovaledMember.add(member);
 			UnapprovalMember.remove(member);
 			return "redirect:/mvc/approval/viewUnapprovalMember";
@@ -132,11 +137,50 @@ public class ApprovalController {
 		if (mapOpt.isPresent()) {
 			Map<String, Object> member = mapOpt.get();
 			member.put("status", newstatus);
+			FalseMember.add(member);
 			 ApprovaledMember.add(member);
 			 UnapprovalMember.remove(member);
 			return "redirect:/mvc/approval/viewUnapprovalMember";
 		}
 		return "修改失敗";
 	}
+	
+	
+	
+//5.查看通過會員
+	//http://localhost:8080/MyBank/mvc/approval/viewPassMember
+		@RequestMapping(value = "/viewPassMember", method = { RequestMethod.GET,
+				RequestMethod.POST }, produces = "text/plain;charset=utf-8")
+		
+		public ModelAndView viewPassMember() {
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("PassMember", PassMember);
+			mv.setViewName("/bank/manager/passmember.jsp");
+			return mv;
+		}
+	
+	
+	
+// 6.查看未通過會員
+		//http://localhost:8080/MyBank/mvc/approval/viewFalseMember
+		@RequestMapping(value = "/viewFalseMember", method = { RequestMethod.GET,
+				RequestMethod.POST }, produces = "text/plain;charset=utf-8")
+		
+		public ModelAndView viewFalseMember() {
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("FalseMember", FalseMember);
+			mv.setViewName("/bank/manager/falsemember.jsp");
+			return mv;
+		}
+		
+// 6.查看數據報表
+	//http://localhost:8080/MyBank/mvc/approval/viewreport
+	@RequestMapping(value = "/viewreport", method = { RequestMethod.GET,
+						RequestMethod.POST }, produces = "text/plain;charset=utf-8")
+				public ModelAndView viewreport() {
+					ModelAndView mv = new ModelAndView();
+					mv.setViewName("/bank/manager/report.jsp");
+					return mv;
+				}
 
 }

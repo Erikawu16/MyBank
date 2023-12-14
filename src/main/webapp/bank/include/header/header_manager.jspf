@@ -52,14 +52,14 @@
 						aria-current="page" href="./viewApprovaledMember">已審核資料</a></li>
 					
 					<li class="nav-item"><a class="nav-link text-white"
-						href="./report.jsp">查看數據</a></li>
+						href="./viewreport">查看數據</a></li>
 
 					<li class="nav-item"><a
 						class="nav-link text-white   d-lg-none" href="./viewUnapprovalMember">會員登出</a>
 					</li>
 			</div>
 			<i class="bi bi-person-circle text-light h5 mb-0 d-none d-lg-flex"></i>
-			<a class="nav-link text-white d-none d-lg-block" href="../index.jsp">登出</a>
+			<a class="nav-link text-white d-none d-lg-block" href="../../bank/index.jsp">登出</a>
 
 		</div>
 	</nav>
